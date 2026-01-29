@@ -336,13 +336,9 @@ button {
     text-decoration-line: none;
 }
 
-.mobile-list-navigation,
-.mobile-list-contact {
-    li:first-child {
-        a {
-            color: #4d5ae5;
-        }
-    }
+.mobile-list-navigation li:first-child a,
+.mobile-list-contact li:first-child a {
+    color: #4d5ae5;
 }
 
 .mobile-contact-item {
@@ -396,6 +392,7 @@ button {
     background-color: #2E2F42;
     text-align: center;
     width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 72px 0;
     background-image: linear-gradient(
@@ -407,9 +404,11 @@ button {
 }
 
 @media screen and (min-width: 320px) and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
+    .section-hero {
         background-image: linear-gradient(
                 to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
         ), url("../images/hero/people-office-mob-2x.png");
+    }
 }
 
 h1 {
@@ -758,10 +757,11 @@ h1 {
 }
 
 @media screen and (min-width: 768px) and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
-    background-image: linear-gradient(
-            to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
-    ), url("../images/hero/people-office-tab-2x.png");
-
+    .section-hero {
+        background-image: linear-gradient(
+                to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
+        ), url("../images/hero/people-office-tab-2x.png");
+    }
 }
 
 
@@ -769,7 +769,6 @@ h1 {
 @media screen and (min-width: 1158px) {
     .section-hero {
         width: 100%;
-        margin: 0 auto;
         padding: 188px 0;
         background-image: linear-gradient(
                 to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
@@ -807,10 +806,11 @@ h1 {
 }
 
 @media screen and (min-width: 1158px) and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
-    background-image: linear-gradient(
-            to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
-    ), url("../images/hero/people-office-desk-2x.png");
-
+    .section-hero {
+        background-image: linear-gradient(
+                to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)
+        ), url("../images/hero/people-office-desk-2x.png");
+    }
 }
 
 /*____________section features___________*/
@@ -1366,6 +1366,11 @@ footer {
     font-weight: 400;
 }
 
+.form-input:hover,
+.form-input:focus {
+    border-color: #31D0AA;
+}
+
 .footer-form-btn {
     display: flex;
     justify-content: center;
@@ -1390,6 +1395,11 @@ footer {
     border-radius: 4px;
     max-width: 165px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+    background-color: #31D0AA;
 }
 
 .icon-btn {
@@ -1448,19 +1458,10 @@ footer {
         min-width: 264px;
     }
 
-    .form-input:hover,
-    .form-input:focus {
-        border-color: #31D0AA;
-    }
-
     .footer-form-btn {
         display: inline-flex;
     }
 
-    .footer-form-btn:hover,
-    .footer-form-btn:focus {
-        background-color: #31D0AA;
-    }
 }
 
 
@@ -1522,7 +1523,7 @@ footer {
 }
 
 
-/*____________modal overlay___________*/
+
 
 
 
